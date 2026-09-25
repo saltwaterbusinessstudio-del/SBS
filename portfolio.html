@@ -24,36 +24,18 @@
 ================================ -->
 
 <header>
-    <nav class="nav">
-
-        <div class="brand">
-            Saltwater <span>Business Studio</span>
-        </div>
-
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
+  <nav class="nav">
+    <div class="brand">Saltwater <span>Business Studio</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="meet.html">Meet the Team</a></li>
-        </ul>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="meet.html">Meet the Team</a></li>
 
-        <a class="btn btn-primary" href="contact.html">
-            Book a free call
-        </a>
-
-        <button
-            class="nav-mobile-toggle"
-            type="button"
-            aria-label="Toggle menu"
-            onclick="
-                const menu = document.querySelector('.nav-links');
-                menu.classList.toggle('mobile-open');
-            "
-        >
-            ☰
-        </button>
-
-    </nav>
+    </ul>
+    <a class="btn btn-primary" href="contact.html">Book a free call</a>
+    <button class="nav-mobile-toggle" onclick="document.querySelector('.nav-links').style.display = document.querySelector('.nav-links').style.display === 'flex' ? 'none' : 'flex'; document.querySelector('.nav-links').style.cssText += 'flex-direction:column;position:absolute;top:64px;right:28px;background:var(--white);padding:18px 24px;border:1px solid var(--line);border-radius:4px;'" aria-label="Toggle menu">☰</button>
+  </nav>
 </header>
 
 
