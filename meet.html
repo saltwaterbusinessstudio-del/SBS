@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Saltwater Business Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <div class="brand">Saltwater <span>Business Studio</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="meet.html">Meet the Team</a></li>
+
+    </ul>
+    <a class="btn btn-primary" href="contact.html">Book a free call</a>
+    <button class="nav-mobile-toggle" onclick="document.querySelector('.nav-links').style.display = document.querySelector('.nav-links').style.display === 'flex' ? 'none' : 'flex'; document.querySelector('.nav-links').style.cssText += 'flex-direction:column;position:absolute;top:64px;right:28px;background:var(--white);padding:18px 24px;border:1px solid var(--line);border-radius:4px;'" aria-label="Toggle menu">☰</button>
+  </nav>
+</header>
+<section class="team-section" id="team">
+    <div class="team-intro">
+        <p class="eyebrow">Meet the team</p>
+        <h2>The people behind the work.</h2>
+        <p>
+            We're a small team, each with a different part to play in
+            helping small businesses get online.
+        </p>
+    </div>
+
+    <div class="team-grid">
+
+        <article class="team-member">
+            <div class="team-photo">
+                <img src="images/dena.jpg" alt="Dena, website designer">
+            </div>
+            <div class="team-info">
+                <h3>Dena</h3>
+                <p class="team-role">Design & Development</p>
+                <p>
+                    Dena designs and builds the websites, bringing together
+                    the structure, visuals, and details that make each site
+                    feel like a natural fit for the business behind it.
+                </p>
+            </div>
+        </article>
+
+        <article class="team-member">
+            <div class="team-photo">
+                <img src="images/randall.jpg" alt="Randall, Client Advisor">
+            </div>
+            <div class="team-info">
+                <h3>Randall</h3>
+                <p class="team-role">Client Advisor</p>
+                <p>
+                    Randall gets to know the businesses we work with,
+                    answers questions, and helps connect clients with
+                    the services that make sense for them.
+                </p>
+            </div>
+        </article>
+
+        <article class="team-member">
+            <div class="team-photo">
+                <img src="images/charlie.jpg" alt="Charlie, administration">
+            </div>
+            <div class="team-info">
+                <h3>Charlie</h3>
+                <p class="team-role">Administration</p>
+                <p>
+                    Charlie handles the behind-the-scenes details and
+                    keeps things organized so projects can keep moving
+                    smoothly.
+                </p>
+            </div>
+        </article>
+
+    </div>
+</section>
