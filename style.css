@@ -1445,19 +1445,13 @@ footer {
 }
 
 .team-grid {
-
     display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
+    grid-template-columns: repeat(2, minmax(280px, 420px));
     gap: 45px;
-
-    max-width: 1050px;
-
+    justify-content: center;
+    max-width: 900px;
     margin: 0 auto;
-
 }
-
 .team-member {
 
     text-align: center;
