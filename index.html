@@ -1,8 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://saltwaterbusinessstudio.com/#organization",
+      "name": "Saltwater Business Studio",
+      "url": "https://saltwaterbusinessstudio.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://saltwaterbusinessstudio.com/#logo",
+        "url": "https://saltwaterbusinessstudio.com/images/saltwaterlogo.png",
+        "contentUrl": "https://saltwaterbusinessstudio.com/images/saltwaterlogo.png"
+      },
+      "description": "Saltwater Business Studio is a Southwest Florida web design studio creating straightforward, professional websites for small businesses in Sarasota, Venice, and surrounding communities.",
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Sarasota",
+          "addressRegion": "FL",
+          "addressCountry": "US"
+        },
+        {
+          "@type": "City",
+          "name": "Venice",
+          "addressRegion": "FL",
+          "addressCountry": "US"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Southwest Florida",
+          "addressRegion": "FL",
+          "addressCountry": "US"
+        }
+      ],
+      "knowsAbout": [
+        "Web design",
+        "Small business websites",
+        "Website design",
+        "Website redesign",
+        "Single-page websites",
+        "Multi-page websites",
+        "Mobile-friendly websites",
+        "Contact forms",
+        "Inquiry forms",
+        "Quote forms",
+        "Sign-up forms",
+        "Lead generation",
+        "Photo galleries",
+        "Media integration"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://saltwaterbusinessstudio.com/#website",
+      "url": "https://saltwaterbusinessstudio.com/",
+      "name": "Saltwater Business Studio",
+      "publisher": {
+        "@id": "https://saltwaterbusinessstudio.com/#organization"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://saltwaterbusinessstudio.com/#web-design-service",
+      "name": "Small Business Web Design",
+      "serviceType": "Web Design",
+      "description": "Custom single-page and multi-page website design for small businesses, including mobile-friendly design, contact and inquiry forms, quote forms, sign-up forms, photo galleries, and media integration.",
+      "provider": {
+        "@id": "https://saltwaterbusinessstudio.com/#organization"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Sarasota",
+          "addressRegion": "FL",
+          "addressCountry": "US"
+        },
+        {
+          "@type": "City",
+          "name": "Venice",
+          "addressRegion": "FL",
+          "addressCountry": "US"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Southwest Florida",
+          "addressRegion": "FL",
+          "addressCountry": "US"
+        }
+      ]
+    }
+  ]
+}
+</script>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Saltwater Business Studio | Websites for Small Businesses</title>
+<meta name="description" content="Saltwater Business Studio creates custom websites for small businesses, with professional design, lead forms, and practical tools that make it easier for customers to connect.">
 <title>Saltwater Business Studio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,15 +110,25 @@
 <header>
   <nav class="nav">
     <div class="brand">Saltwater <span>Business Studio</span></div>
+
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="meet.html">About Us</a></li>
       <li><a href="contact.html">Contact</a></li>
-      <li><a href="meet.html">Meet the Team</a></li>
-
     </ul>
+
     <a class="btn btn-primary" href="contact.html">Book a free call</a>
-    <button class="nav-mobile-toggle" onclick="document.querySelector('.nav-links').style.display = document.querySelector('.nav-links').style.display === 'flex' ? 'none' : 'flex'; document.querySelector('.nav-links').style.cssText += 'flex-direction:column;position:absolute;top:64px;right:28px;background:var(--white);padding:18px 24px;border:1px solid var(--line);border-radius:4px;'" aria-label="Toggle menu">☰</button>
+
+    <button
+      class="nav-mobile-toggle"
+      type="button"
+      aria-label="Open navigation"
+      aria-expanded="false"
+    >
+      ☰
+    </button>
   </nav>
 </header>
 
@@ -51,7 +158,7 @@
       </div>
       <div class="hero-card">
         <p class="tag">Start here, for free</p>
-        <h3>15 Minute Discovery Call</h3>
+        <h3>Let's Talk!</h3>
         <p>Not sure what your website needs? We'll talk through what you have now, what you want your website to do, and what would make the most sense for your business.</p>
         <div class="stat-row">
           <div class="stat"><b>$0</b><span>To start</span></div>
@@ -107,41 +214,103 @@
   </section>
   
 
-  <!-- COACHING -->
-  <section id="coaching">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow-label">A website that works for your business</p>
-        <h2>Make it easier for customers to find you.</h2>
-        <p>Whether you don't have a website yet or your current one needs a fresh start, we'll create a professional site that clearly explains what you do, showcases your business, and makes it easy for customers to get in touch.</p>
-      </div>
-      <div class="steps">
-        <div class="step">
-          <div class="step-num"></div>
-          <div>
-            <div class="step-head">
-              <h3>Free discovery call</h3>
-            </div>
-            <p class="desc"> Not sure what you need or where to start? Book a free 30 minute discovery call. We'll talk about your business, your goals for the site, and the kind of website that would make sense for you. You'll leave with a clearer idea of what you need and what your next step could be.
-</p>
-            <a class="btn btn-outline" href="contact.html">Book your call</a>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step-num"></div>
-          
-          <div>
-            <div class="step-head">
-              <h3>Get a Website</h3>
-            </div>
-            <p class="desc">A custom website built around your business, with the pages, content, contact forms, and features you need to give your customers a clear place to learn about what you do and get in touch.
-</p>
-            <a class="btn btn-outline" href="contact.html">Get Started</a>
-          </div>
-        </div>
-      </div>
+<section>
+  <div class="wrap">
+
+    <div class="section-head">
+      <p class="eyebrow-label">Who we work with</p>
+
+      <h2>For businesses that are ready to look as established online as they are in real life.</h2>
+
+      <p>
+        We work with small businesses that need a website that feels like them, not some generic template that could belong to anyone.
+      </p>
     </div>
-  </section>
+
+    <div class="paths">
+
+      <div class="path-card filled">
+
+        <p class="eyebrow-label">Starting from scratch</p>
+
+        <h3>You don't have a website yet.</h3>
+
+        <p>
+          We'll help turn what you already know about your business into a clear, professional online presence.
+        </p>
+
+        <a class="btn btn-outline" href="contact.html">Talk about your project</a>
+
+      </div>
+
+      <div class="path-card outline">
+
+        <p class="eyebrow-label">Ready for a change</p>
+
+        <h3>Your current website isn't cutting it.</h3>
+
+        <p>
+          Maybe it's outdated, hard to use, difficult to update, or simply doesn't feel like your business anymore. We can rebuild it around where your business is now.
+        </p>
+
+        <a class="btn btn-outline" href="contact.html">Talk about a redesign</a>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+
+    <div class="section-head">
+      <p class="eyebrow-label">What we do</p>
+
+      <h2>More than a pretty homepage.</h2>
+
+      <p>
+        Your website has a job to do. We build around what your customers actually need to know and what you want them to do next.
+      </p>
+    </div>
+
+    <div class="fit-grid">
+
+      <div class="fit-col">
+
+        <h3>Websites &amp; redesigns</h3>
+
+        <ul>
+          <li>Custom small-business websites</li>
+          <li>Website redesigns</li>
+          <li>Mobile-friendly layouts</li>
+          <li>Service and about pages</li>
+          <li>Portfolio and gallery pages</li>
+          <li>FAQ sections</li>
+        </ul>
+
+      </div>
+
+      <div class="fit-col">
+
+        <h3>Tools that help your business</h3>
+
+        <ul>
+          <li>Contact and inquiry forms</li>
+          <li>Quote and lead forms</li>
+          <li>Appointment scheduling integrations</li>
+          <li>Online payment integrations</li>
+          <li>Google Analytics setup</li>
+          <li>Foundational on-page SEO</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
 
 
 
