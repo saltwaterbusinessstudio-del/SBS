@@ -24,7 +24,7 @@
         "name": "What does Saltwater Business Studio do?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Saltwater Business Studio creates custom websites for small businesses. We design and build professional, mobile-friendly websites, along with features such as contact forms, inquiry forms, scheduling, payment integrations, and other tools your business may need. We work with businesses in Sarasota, Venice, and throughout Southwest Florida."
+          "text": "Saltwater Business Studio creates custom websites for small businesses. We design and build professional, mobile friendly websites, along with features such as contact forms, inquiry forms, scheduling, payment integrations, and other tools your business may need. We work with businesses in Sarasota, Venice, and throughout Southwest Florida."
         }
       },
       {
@@ -526,29 +526,47 @@
 
   </main>
 
-  <footer>
+ <footer>
+
     <div class="wrap">
-      <div class="footer-main">
-        <div>
-          <a href="index.html" class="brand">Saltwater Business Studio</a>
-          <p>Websites with a little more thought behind them.</p>
+
+        <div class="foot-row">
+
+            <div class="brand">
+                Saltwater <span>Business Studio</span>
+            </div>
+
+            <ul class="foot-links">
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="portfolio.html">Portfolio</a>
+                </li>
+                <li>
+                    <a href="faq.html">FAQ</a>
+                </li>
+
+                <li>
+                    <a href="meet.html">About</a>
+                </li>
+
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+            </ul>
+
         </div>
 
-    <div class="footer-links">
-      <a href="index.html">Home</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="meet.html">Meet</a>
-      <a href="faq.html">FAQ</a>
-      <a href="contact.html">Contact</a>
+        <p class="foot-copy">
+            © 2026 Saltwater Business Studio. All rights reserved.
+        </p>
+
     </div>
-  </div>
 
-  <div class="footer-bottom">
-    <span>© 2026 Saltwater Business Studio</span>
-  </div>
-</div>
+</footer>
 
-  </footer>
 
   <script>
     document.querySelectorAll(".faq-question").forEach(function (button) {
@@ -568,23 +586,11 @@
       });
     });
 
-    var navToggle = document.querySelector(".nav-toggle");
-    var navLinks = document.querySelector(".nav-links");
-
-    if (navToggle && navLinks) {
-      navToggle.addEventListener("click", function () {
-        var isOpen = navLinks.classList.toggle("open");
-        navToggle.setAttribute("aria-expanded", String(isOpen));
-      });
-
-      navLinks.querySelectorAll("a").forEach(function (link) {
-        link.addEventListener("click", function () {
-          navLinks.classList.remove("open");
-          navToggle.setAttribute("aria-expanded", "false");
-        });
-      });
-    }
+    
   </script>
+
+  <script src="script.js"></script>
+
 
 </body>
 </html>

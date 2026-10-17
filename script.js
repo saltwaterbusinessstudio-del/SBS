@@ -1,51 +1,69 @@
-document.getElementById('year').textContent = new Date().getFullYear();
 
-  document.getElementById('leadForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    var f = e.target;
-    var name = f.name.value.trim();
-    var email = f.email.value.trim();
-    var stage = f.stage.value;
-    var interest = f.interest.value;
-    var timeline = f.timeline.value;
-    var presence = f.presence.value.trim();
-    var message = f.message.value.trim();
+const yearElement = document.getElementById('year');
 
-    var subject = 'New inquiry: ' + name + ' — ' + interest;
-    var bodyLines = [
-      'Name: ' + name,
-      'Email: ' + email,
-      'Describes them as: ' + stage,
-      'Interested in: ' + interest,
-      'Timeline: ' + timeline,
-      'Current online presence: ' + (presence || 'Not provided'),
-      '',
-      'Message:',
-      message || '(none)'
-    ];
-    var body = bodyLines.join('\n');
-    var mailto = 'mailto:hello@saltwaterbusinessstudio.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-    window.location.href = mailto;
-  });
-  const navToggle = document.querySelector(".nav-mobile-toggle");
-const navLinks = document.querySelector(".nav-links");
+if (yearElement) {
+    yearElement.textContent = new Date().getFullYear();
+}
+
+// Lead form handler
+const sbsLeadForm = document.getElementById('leadForm');
+
+if (sbsLeadForm) {
+    sbsLeadForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const f = e.target;
+        const name = f.name.value.trim();
+        const email = f.email.value.trim();
+        const stage = f.stage.value;
+        const interest = f.interest.value;
+        const timeline = f.timeline.value;
+        const presence = f.presence.value.trim();
+        const message = f.message.value.trim();
+
+        const subject = 'New inquiry: ' + name + ' — ' + interest;
+        const bodyLines = [
+            'Name: ' + name,
+            'Email: ' + email,
+            'Describes them as: ' + stage,
+            'Interested in: ' + interest,
+            'Timeline: ' + timeline,
+            'Current online presence: ' + (presence || 'Not provided'),
+            '',
+            'Message:',
+            message || '(none)'
+        ];
+
+        const mailto =
+            'mailto:hello@saltwaterbusinessstudio.com?subject=' +
+            encodeURIComponent(subject) +
+            '&body=' +
+            encodeURIComponent(bodyLines.join('\n'));
+
+        window.location.href = mailto;
+    });
+}
+
+// Mobile navigation
+const navToggle = document.querySelector('.nav-mobile-toggle');
+const navLinks = document.querySelector('.nav-links');
 
 if (navToggle && navLinks) {
-    navToggle.addEventListener("click", () => {
-        const isOpen = navLinks.classList.toggle("open");
+    navToggle.addEventListener('click', () => {
+        const isOpen = navLinks.classList.toggle('open');
 
-        navToggle.setAttribute("aria-expanded", isOpen);
+        navToggle.setAttribute('aria-expanded', String(isOpen));
         navToggle.setAttribute(
-            "aria-label",
-            isOpen ? "Close navigation" : "Open navigation"
+            'aria-label',
+            isOpen ? 'Close navigation' : 'Open navigation'
         );
     });
 
-    navLinks.querySelectorAll("a").forEach((link) => {
-        link.addEventListener("click", () => {
-            navLinks.classList.remove("open");
-            navToggle.setAttribute("aria-expanded", "false");
-            navToggle.setAttribute("aria-label", "Open navigation");
+    navLinks.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('open');
+            navToggle.setAttribute('aria-expanded', 'false');
+            navToggle.setAttribute('aria-label', 'Open navigation');
         });
     });
 }
